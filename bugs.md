@@ -1,5 +1,6 @@
 #### Bugs
 
+*  bug1: Oracle 9i jar - Oracle9iDialect 中分页查询代码返回的sql 中返回所有列，即便查询sql 中只有一列，但是分页查询的时候会返回目标列以及行号
 ```
 public String getLimitString(String sql, boolean hasOffset) {
 		sql = sql.trim();
@@ -35,8 +36,6 @@ public String getLimitString(String sql, boolean hasOffset) {
 
 		return pagingSelect.toString();
 	}
-	
-	 Oracle 9i jar - Oracle9iDialect 中分页查询代码返回的sql 中返回所有列，即便查询sql 中只有一列，但是分页查询的时候会返回目标列以及行号
 	 
 ```
 
